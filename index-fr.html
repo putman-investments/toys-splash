@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mise à jour du site Web | Toys "R" Us Canada</title>
+  <meta name="description" content="Nous améliorons notre site Web pour améliorer votre expérience d'achat. Visitez votre magasin Toys R Us ou Babies R Us pendant que les commandes en ligne sont temporairement indisponibles.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://www.toysrus.ca/fr">
+
+  <style>
+    /* Minimal reset + font */
+    html, body { margin:0; padding:0; }
+    body { font-family:'Montserrat', Arial, sans-serif; }
+
+    /* Container */
+    .page {
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 16px;
+      box-sizing:border-box;
+    }
+
+    /* =========================
+       LANGUAGE SWITCHER
+    ========================= */
+    body {
+      position:relative;
+    }
+    .lang-switcher {
+      position:fixed;
+      top:20px;
+      right:20px;
+      z-index:10000;
+    }
+    .lang-switcher a {
+      display:inline-block;
+      padding:8px 16px;
+      background:#fff;
+      color:#0061af;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:700;
+      font-size:14px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+      transition:background 0.2s ease;
+    }
+    .lang-switcher a:hover {
+      background:#f1f2f9;
+    }
+
+    /* =========================
+       HEADER BANNER (FULL BG, IMAGE NOT STRETCHED)
+    ========================= */
+    .header-banner {
+      width:100%;
+      background:#4cc2ec;
+      text-align:center;
+      position:relative;
+    }
+    .header-banner picture { display:block; }
+    .header-banner img {
+      display:block;
+      margin:0 auto;
+      border:0;
+      width:auto;        /* don't stretch */
+      max-width:100%;    /* prevent overflow on small screens */
+      height:auto;
+    }
+
+    /* =========================
+       WHO TO CONTACT (2-COL, STACK ON MOBILE)
+    ========================= */
+    .info-section { padding:26px 0 10px; }
+    .section-title {
+      font-weight:700;
+      font-size:32px;
+      color:#0061af;
+      text-align:center;
+      line-height:1.35;
+      margin:0 0 14px;
+    }
+
+    .info-grid {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:16px;
+      text-align:left;
+    }
+
+    .info-card {
+      width:calc((100% - 16px) / 2);
+      background:#f1f2f9;
+      border-radius:16px;
+      padding:20px;
+      box-sizing:border-box;
+    }
+
+    .info-card h3 {
+      margin:0 0 8px;
+      font-size:20px;
+      line-height:1.25;
+      font-weight:700;
+      color:#0061af;
+    }
+
+    .info-card p {
+      margin:0 0 10px;
+      font-size:16px;
+      line-height:1.5;
+      color:#222;
+    }
+
+    .info-card p:last-child { margin-bottom:0; }
+
+    .info-card a {
+      color:#0061af;
+      text-decoration:underline;
+      font-weight:700;
+    }
+
+    /* =========================
+       BLUE LOCATION SECTION
+    ========================= */
+    .blue-section {
+      background-color:#0061af;
+      padding:26px 0 20px;
+      margin-top:22px;
+    }
+
+    .wonderlab-title {
+      font-weight:700;
+      font-size:36px;
+      color:#fff;
+      text-align:center;
+      line-height:1.35;
+      margin:0 0 10px;
+    }
+
+    .blue-subtext {
+      text-align:center;
+      color:#fff;
+      margin:0 0 10px;
+      line-height:1.5;
+      font-size:16px;
+    }
+
+    .birthday-5col {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      gap:12px;
+      padding:18px 0 8px;
+      margin:0;
+    }
+
+    .birthday-5col > div {
+      width:calc((100% - (12px * 4)) / 5);
+      background:#fff;
+      border-radius:12px;
+      font-size:95%;
+      text-align:center;
+      text-transform:uppercase;
+      line-height:1.4;
+      padding:14px 8px;
+      box-sizing:border-box;
+    }
+
+    .birthday-5col a { text-decoration:none; }
+
+    .birthday-txtblue { font-size:120%; font-weight:700; color:#0061af; }
+    .birthday-txtred { font-size:95%; color:#ed145b; font-weight:600; }
+    .birthday-txtgreen { font-size:100%; color:#6ab63f; font-weight:700; }
+
+    .directions-link {
+      font-weight:700;
+      text-decoration:underline;
+      color:#000;
+      display:inline-block;
+      margin-top:2px;
+    }
+
+    /* =========================
+       STAY CONNECTED (UNDER LOCATIONS)
+    ========================= */
+    .social-section {
+      padding:18px 0 0;
+      text-align:center;
+    }
+
+    .social-headline {
+      margin:12px 0 6px;
+      font-weight:700;
+      font-size:24px;
+      color:#fff;
+      line-height:1.25;
+    }
+
+    .social-text {
+      margin:0 auto 12px;
+      max-width:900px;
+      color:#fff;
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .social-icons {
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
+      padding:6px 0 10px;
+    }
+
+    .social-icons a {
+      display:inline-block;
+      width:44px;
+      height:44px;
+      background:#fff;
+      border-radius:12px;
+      padding:8px;
+      box-sizing:border-box;
+    }
+
+    .social-icons img {
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      border:0;
+    }
+
+    .social-links {
+      margin:0 auto;
+      max-width:980px;
+      color:#fff;
+      font-size:14px;
+      line-height:1.6;
+    }
+
+    .social-links a {
+      color:#fff;
+      text-decoration:underline;
+      font-weight:700;
+    }
+
+    /* =========================
+       FAQ Accordion – Salesforce-safe
+    ========================= */
+    .faq-accordion { margin:0; padding:0; }
+    .faq-item { border-bottom:1px solid #e6e6e6; }
+    .faq-button {
+      width:100%;
+      text-align:left;
+      background:transparent;
+      border:0;
+      padding:16px 0;
+      cursor:pointer;
+      font:inherit;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .faq-button:focus { outline:2px solid #0060ae; outline-offset:2px; }
+    .faq-title { margin:0; font-size:16px; line-height:1.3; font-weight:600; color:#222; }
+    .faq-icon { flex:0 0 auto; width:18px; height:18px; position:relative; }
+    .faq-icon:before,
+    .faq-icon:after {
+      content:"";
+      position:absolute;
+      top:50%;
+      left:0;
+      right:0;
+      height:2px;
+      background:currentColor;
+      transform:translateY(-50%);
+    }
+    .faq-icon:after { transform:translateY(-50%) rotate(90deg); transition:transform 0.18s ease; }
+    .faq-button[aria-expanded="true"] .faq-icon:after { transform:translateY(-50%) rotate(0deg); }
+    .faq-panel { overflow:hidden; }
+    .faq-panel-inner { padding:0 0 16px 0; }
+    .faq-panel p { margin-top:10px; }
+    .faq-panel p:first-child { margin-top:0; }
+    .faq-panel p + ul { margin-top:8px; }
+    .faq-panel ul + p { margin-top:12px; }
+    .faq-panel ul { margin-bottom:0; }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+    @media (max-width:1024px){
+      .section-title { font-size:28px; }
+      .wonderlab-title { font-size:30px; }
+      .birthday-5col > div { width:calc((100% - (12px * 3)) / 4); font-size:90%; }
+    }
+
+    @media (max-width:950px){
+      .section-title { font-size:24px; }
+      .wonderlab-title { font-size:24px; }
+      .birthday-5col > div { width:calc((100% - (12px * 2)) / 3); font-size:85%; }
+      .info-card { width:100%; }
+    }
+
+    @media (max-width:549px){
+      .section-title { font-size:22px; }
+      .wonderlab-title { font-size:21px; padding:0 2%; }
+      .birthday-5col { justify-content:space-between; }
+      .birthday-5col > div { width:calc((100% - 12px) / 2); font-size:80%; }
+      .info-card { width:100%; }
+      .social-icons a { width:42px; height:42px; border-radius:10px; }
+    }
+      
+  /* HEADER BANNER — background + bottom-aligned banner image */
+  .header-banner{
+    width:100%;
+    background-image:url("images/header-iconography-desktop.png");
+    background-repeat:repeat;
+    background-position:center top;
+    background-size:auto;
+    
+    /* This creates space for the patterned background */
+    padding-top:40px; 
+    padding-bottom:0;
+
+    text-align:center;
+    box-sizing:border-box;
+  }
+
+  .header-banner picture{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end; /* forces image to bottom */
+  }
+
+  .header-banner img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    border:0;
+  }
+
+  /* Mobile background swap */
+  @media (max-width: 549px){
+    .header-banner{
+      background-image:url("images/header-iconography-mobile.png");
+      padding-top:24px;
+    }
+  } 
+      
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER BANNER (full browser bg, image not stretched) -->
+<div class="header-banner">
+  <div class="lang-switcher">
+    <a href="index.html">English</a>
+  </div>
+  <picture>
+    <!-- Mobile banner -->
+    <source media="(max-width: 549px)" srcset="images/header-mobile-fr.png">
+    <!-- Desktop banner -->
+    <img src="images/header-desktop-fr.png" alt="Toys R Us Website Update">
+  </picture>
+</div>
+
+  <!-- WHO TO CONTACT (ABOVE BLUE LOCATIONS) -->
+  <div class="info-section">
+    <div class="page">
+      <div class="section-title">Nous joindre?</div>
+
+      <div class="info-grid">
+        <!-- Card 1 -->
+        <div class="info-card">
+          <h3>Vous avez besoin d’aide?</h3>
+          <p>
+            Si vous avez des questions concernant une commande en ligne ou une demande d'ordre général, notre équipe du service à la clientèle est là pour vous aider.
+          </p>
+          <p>
+            Veuillez envoyer un courriel à <a href="mailto:customerservice@toysrus.ca">customerservice@toysrus.ca</a>, et un membre de notre équipe vous répondra dans les plus brefs délais.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="info-card">
+          <h3>L’Amusodrome reste ouvert!</h3>
+          <p>
+          Nos aires de jeux intérieures Amusodrome restent ouvertes dans certains magasins. Veuillez appeler ou vous rendre dans votre magasin local pour obtenir des informations sur les horaires, les entrées et les fêtes d'anniversaire. Suivez-nous sur les réseaux sociaux pour connaître les dernières actualités! </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- START BLUE LOCATION SECTION -->
+  <div class="blue-section">
+    <div class="page">
+      <div class="wonderlab-title">Visitez-nous en magasin!</div>
+
+      <p class="blue-subtext">
+      Vous pouvez toujours faire vos achats dans l'un de nos magasins Toys“R”Us et Babies“R”Us . 
+<br>
+Trouvez le magasin le plus proche de chez vous ci-dessous.  
+      </p>
+
+      <div class="birthday-5col">
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/dzaVL9wgvUXWUkaIj" target="_blank" rel="noopener noreferrer">BRAMPTON</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/dzaVL9wgvUXWUkaIj" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <!-- <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/cOfegPQy16Uh5D8p5" target="_blank" rel="noopener noreferrer">CROSS IRON MILLS</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/cOfegPQy16Uh5D8p5" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div> -->
+
+        <!-- <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/miyM3kbzFrRNlGziZ" target="_blank" rel="noopener noreferrer">GUELPH</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/miyM3kbzFrRNlGziZ" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div> -->
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/v3nC0mZSdX7p355Ex" target="_blank" rel="noopener noreferrer">HAMILTON</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/v3nC0mZSdX7p355Ex" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/KTHcWwB9BOcyKTeND" target="_blank" rel="noopener noreferrer">KILDONAN</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/KTHcWwB9BOcyKTeND" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/vQ8iSP5spUck96MRm" target="_blank" rel="noopener noreferrer">KINGSTON</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/vQ8iSP5spUck96MRm" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/pZ8lnD9Ej3lF7eXDr" target="_blank" rel="noopener noreferrer">KITCHENER</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/pZ8lnD9Ej3lF7eXDr" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/cTYqYNMVwbdj8Uk7m" target="_blank" rel="noopener noreferrer">LETHBRIDGE</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/cTYqYNMVwbdj8Uk7m" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/cREb6rXv5N4rbRgFA" target="_blank" rel="noopener noreferrer">NEPEAN</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/cREb6rXv5N4rbRgFA" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/YOcc1T5z0B8qEX79M" target="_blank" rel="noopener noreferrer">NEWMARKET</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/YOcc1T5z0B8qEX79M" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/96S8gJv9C0TXRYEvS" target="_blank" rel="noopener noreferrer">BARRIE NORD</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/96S8gJv9C0TXRYEvS" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/kUEK4Nv3ZZTSj0bvK" target="_blank" rel="noopener noreferrer">EDMONTON NORD</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/kUEK4Nv3ZZTSj0bvK" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/yrqhKTUFAjQ0mcOGq" target="_blank" rel="noopener noreferrer">PEN CENTRE</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/yrqhKTUFAjQ0mcOGq" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/WW4Do3V1w2CrVeBlr" target="_blank" rel="noopener noreferrer">POLO PARK</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/WW4Do3V1w2CrVeBlr" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/Bh4mCLTij9EMVcSZq" target="_blank" rel="noopener noreferrer">REGINA</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/Bh4mCLTij9EMVcSZq" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/dp2tv0j59UUPtX7q3" target="_blank" rel="noopener noreferrer">SAINT-BRUNO</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/dp2tv0j59UUPtX7q3" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/TbzCzsLcr2xhR8X30" target="_blank" rel="noopener noreferrer">SARNIA</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/TbzCzsLcr2xhR8X30" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/fEZFGjN1h3sWkLu2N" target="_blank" rel="noopener noreferrer">SHERWAY</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/fEZFGjN1h3sWkLu2N" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/ZzN4D7o6XiZ0ScF9a" target="_blank" rel="noopener noreferrer">EDMONTON SUD</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/ZzN4D7o6XiZ0ScF9a" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/2RBGNQBEwyFpuzAtO" target="_blank" rel="noopener noreferrer">SASKATOON</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/2RBGNQBEwyFpuzAtO" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+          
+    
+    <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/HkLpYLwMEE1BdrSV4" target="_blank" rel="noopener noreferrer">ST. JOHN'S</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/HkLpYLwMEE1BdrSV4" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/5o0ET4KuYXiiwkjc9" target="_blank" rel="noopener noreferrer">SAINT-LAURENT</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/5o0ET4KuYXiiwkjc9" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/c053SCcuFZ6xAhS21" target="_blank" rel="noopener noreferrer">VAUGHAN MILLS</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/c053SCcuFZ6xAhS21" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>
+
+<!--
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://www.toysrus.ca/en/storelocator/birthday-party-place-whitby-on.html" target="_blank" rel="noopener noreferrer">SOUTH EDMONTON</a>
+          </span><br>
+          <a class="directions-link" href="https://maps.app.goo.gl/VkwzU7qHHc5vFPuw6" target="_blank" rel="noopener noreferrer">DIRECTIONS</a>
+        </div>
+-->
+
+        <div>
+          <span class="birthday-txtblue">
+            <a style="color:#0061af;" href="https://share.google/90jSxA7SrVsmwfB0O" target="_blank" rel="noopener noreferrer">WHITBY</a>
+          </span><br>
+          <a class="directions-link" href="https://share.google/90jSxA7SrVsmwfB0O" target="_blank" rel="noopener noreferrer">Comment s’y rendre</a>
+        </div>      
+          
+          
+      </div>
+
+      <!-- STAY CONNECTED (UNDER STORE LOCATIONS) -->
+      <div class="social-section">
+        <div class="social-headline">Restons en contact!</div>
+        <div class="social-text">
+          Suivez-nous sur les réseaux sociaux pour découvrir les dernières actualités, les nouveautés en magasin et les activités ludiques de Toys“R”Us Canada!
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/toysruscanada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram: @toysruscanada">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@toysruscanada" target="_blank" rel="noopener noreferrer" aria-label="TikTok: @toysruscanada">
+            <img src="images/tiktok.png" alt="TikTok">
+          </a>
+          <a href="https://www.facebook.com/ToysRUsCanada" target="_blank" rel="noopener noreferrer" aria-label="Facebook: ToysRUsCanada">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.youtube.com/user/ToysRUsCanada" target="_blank" rel="noopener noreferrer" aria-label="YouTube: ToysRUsCanada">
+            <img src="images/youtube.png" alt="YouTube">
+          </a>
+        </div>
+
+        
+      </div>
+
+    </div>
+  </div>
+  <!-- END BLUE LOCATION SECTION -->
+
+  <!-- START FAQ -->
+  <div class="page" style="padding:22px 16px;">
+    <div id="overview">
+      <div id="creatingregistry">
+        <div class="faq-accordion" data-accordion="" data-accordion-multiple="false">
+
+          <!-- 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="true" aria-controls="faq-panel-1" id="faq-btn-1">
+              <span class="faq-title">Pourquoi ne puis-je pas passer de commande en ligne en ce moment?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-1" class="faq-panel" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-panel-inner">
+                <p>Nous sommes actuellement en train de migrer notre site Web vers une nouvelle plateforme afin d'améliorer ses performances et ses fonctionnalités d'achat futures. Pendant cette opération, le paiement en ligne est temporairement indisponible.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-2" id="faq-btn-2">
+              <span class="faq-title">Pendant combien de temps les commandes en ligne seront-elles indisponibles?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-2" class="faq-panel" role="region" aria-labelledby="faq-btn-2" hidden="">
+              <div class="faq-panel-inner">
+                <p>Les achats en ligne devraient être disponibles à la mi-février. </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+<!--
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-3" id="faq-btn-3">
+              <span class="faq-title">Can I still see product prices and availability?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-3" class="faq-panel" role="region" aria-labelledby="faq-btn-3" hidden="">
+              <div class="faq-panel-inner">
+                <p>Yes. You can view:</p>
+                <ul>
+                  <li>Product details</li>
+                  <li>Pricing</li>
+                  <li>Variations (size, color, style)</li>
+                  <li>Availability shown online is for reference only and may vary by store</li>
+                </ul>
+                <p>Please visit your store for more variety and regular sales and events.</p>
+              </div>
+            </div>
+          </div>
+-->
+
+          <!-- 4 -->
+<!--
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-4" id="faq-btn-4">
+              <span class="faq-title">Can I buy these products in a physical Toys“R”Us store?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-4" class="faq-panel" role="region" aria-labelledby="faq-btn-4" hidden="">
+              <div class="faq-panel-inner">
+                <p>
+                  Yes. All products shown online may be available for purchase in-store, subject to local store inventory.
+                  We recommend checking with your nearest store before visiting.
+                </p>
+              </div>
+            </div>
+          </div>
+-->
+
+          <!-- 5 -->
+<!--
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+              <span class="faq-title">Can I reserve or hold items I see online?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-5" class="faq-panel" role="region" aria-labelledby="faq-btn-5" hidden="">
+              <div class="faq-panel-inner">
+                <p>
+                  At this time, we’re unable to reserve or hold products online during the transition.
+                  Items are sold on a first-come, first-served basis in stores.
+                </p>
+              </div>
+            </div>
+          </div>
+-->
+
+          <!-- 6 -->
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-6" id="faq-btn-6">
+              <span class="faq-title">Les promotions, rabais ou codes promotionnel sont-ils toujours valables?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-6" class="faq-panel" role="region" aria-labelledby="faq-btn-6" hidden="">
+              <div class="faq-panel-inner">
+<!--<p>Online checkout promotions are paused during this period. However:</p>-->
+                <ul>
+                  <li>Les promotions en magasin se poursuivent comme d'habitude.</li>
+                  <li>Les cartes-cadeaux et les offres en magasin restent valables en magasin.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-7" id="faq-btn-7">
+              <span class="faq-title">Qu'en est-il de mes commandes existantes passées avant la migration du site Web?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-7" class="faq-panel" role="region" aria-labelledby="faq-btn-7" hidden="">
+              <div class="faq-panel-inner">
+                <p>Toutes les commandes passées avant le 11 janvier 2026 seront honorées, et : </p>
+                <ul>
+<!--<li>Are still being processed</li>-->
+                  <li>peuvent être suivies comme d'habitude; et</li>
+                  <li>seront livrées ou traitées comme prévu.</li>
+                </ul>
+                <p>Aucune action n'est requise de votre part, sauf en cas de notification. </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-8" id="faq-btn-8">
+              <span class="faq-title">Puis-je retourner ou échanger des articles pendant cette période?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-8" class="faq-panel" role="region" aria-labelledby="faq-btn-8" hidden="">
+              <div class="faq-panel-inner">
+                <p>
+                 Oui. Les retours et les échanges continuent en magasin conformément à notre politique de retour standard. La fonctionnalité de retour en ligne peut être limitée pendant la transition. 
+                </p>
+              </div>
+            </div>
+          </div>
+            
+            
+   <!-- 8.5 -->
+
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-5" id="faq-btn-5">
+              <span class="faq-title">Puis-je encore réserver une fête d'anniversaire dans l'Amusodrome?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-5" class="faq-panel" role="region" aria-labelledby="faq-btn-5" hidden="">
+              <div class="faq-panel-inner">
+                <p>
+         Oui, veuillez communiquer avec votre magasin local. 
+                </p>
+              </div>
+            </div>
+          </div>
+           
+
+          <!-- 9 -->
+<!--
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-9" id="faq-btn-9">
+              <span class="faq-title">Can I still check store locations and hours?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-9" class="faq-panel" role="region" aria-labelledby="faq-btn-9" hidden="">
+              <div class="faq-panel-inner">
+                <p>Yes. Store information remains fully accessible, including:</p>
+                <ul>
+                  <li>Locations</li>
+                  <li>Hours</li>
+                  <li>Contact details</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+-->
+
+          <!-- 11 -->
+<!--
+          <div class="faq-item">
+            <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-11" id="faq-btn-11">
+              <span class="faq-title">Les prix ou les articles changeront-ils lorsque les achats en ligne reprendront?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div id="faq-panel-11" class="faq-panel" role="region" aria-labelledby="faq-btn-11" hidden="">
+              <div class="faq-panel-inner">
+                <p>
+                  La disponibilité, les prix ou les assortiments de certains articles peuvent changer lors du lancement du nouveau site, car nous introduisons des fonctionnalités améliorées et des mises à jour. 
+                </p>
+              </div>
+            </div>
+-->
+          <!-- 12 -->
+
+<div class="faq-item">
+  <button type="button" class="faq-button" aria-expanded="false" aria-controls="faq-panel-12" id="faq-btn-12">
+    <span class="faq-title">Comment saurai-je quand les achats en ligne reprendront?</span>
+    <span class="faq-icon" aria-hidden="true"></span>
+  </button>
+  <div id="faq-panel-12" class="faq-panel" role="region" aria-labelledby="faq-btn-12" hidden="">
+    <div class="faq-panel-inner">
+      <p>Nous annoncerons la relance par :</p>
+      <ul>
+        <li>des bannières sur le site Web;</li>
+        <li>des mises à jour par courriel;</li>
+        <li>les réseaux sociaux.</li>
+      </ul>
+      <p>
+        Suivez-nous sur les réseaux sociaux pour être les premiers informés! <br>
+        Instagram : <strong><a href="https://www.instagram.com/toysruscanada/" target="_blank">@toysruscanada</a></strong>
+      </p>
+    </div>
+  </div>
+</div>
+          </div>
+
+     
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END FAQ -->
+
+  <script>
+  (function () {
+    var accordions = document.querySelectorAll('[data-accordion]');
+    if (!accordions.length) return;
+
+    function closePanel(btn, panel) {
+      btn.setAttribute('aria-expanded', 'false');
+      panel.hidden = true;
+    }
+
+    function openPanel(btn, panel) {
+      btn.setAttribute('aria-expanded', 'true');
+      panel.hidden = false;
+    }
+
+    accordions.forEach(function (acc) {
+      var allowMultiple = acc.getAttribute('data-accordion-multiple') === 'true';
+      var buttons = acc.querySelectorAll('.faq-button');
+
+      buttons.forEach(function (btn) {
+        var panelId = btn.getAttribute('aria-controls');
+        var panel = panelId ? document.getElementById(panelId) : null;
+        if (!panel) return;
+
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        panel.hidden = !expanded;
+
+        btn.addEventListener('click', function () {
+          var isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+          if (!allowMultiple) {
+            buttons.forEach(function (otherBtn) {
+              if (otherBtn === btn) return;
+              var otherPanelId = otherBtn.getAttribute('aria-controls');
+              var otherPanel = otherPanelId ? document.getElementById(otherPanelId) : null;
+              if (otherPanel) closePanel(otherBtn, otherPanel);
+            });
+          }
+
+          if (isOpen) closePanel(btn, panel);
+          else openPanel(btn, panel);
+        });
+      });
+    });
+  })();
+  </script>
+
+</body>
+</html>
